@@ -123,22 +123,6 @@
                             Conocer más
                         </a>
                     </div>
-                    
-                    <!-- Stats Counter -->
-                    <div class="grid grid-cols-3 gap-4 pt-8">
-                        <div class="text-center p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-amber-500/20" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="text-3xl font-bold gradient-text counter" data-target="500">0</div>
-                            <div class="text-sm text-gray-400 mt-1">Casos resueltos</div>
-                        </div>
-                        <div class="text-center p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-amber-500/20" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="text-3xl font-bold gradient-text counter" data-target="1000">0</div>
-                            <div class="text-sm text-gray-400 mt-1">Familias apoyadas</div>
-                        </div>
-                        <div class="text-center p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-amber-500/20" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="text-3xl font-bold gradient-text counter" data-target="15">0</div>
-                            <div class="text-sm text-gray-400 mt-1">Años de experiencia</div>
-                        </div>
-                    </div>
                 </div>
                 
                 <!-- Hero Icon -->
