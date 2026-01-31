@@ -81,4 +81,3 @@ SOFTWARE.
 Para más información, visita nuestro sitio web o contáctanos a través de los canales disponibles en la página.
 =======
 # Fundacion-Yonari
->>>>>>> f5288a82955ffda4b224b672addc4f3df0a00b28
