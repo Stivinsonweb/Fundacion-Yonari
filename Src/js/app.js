@@ -195,33 +195,41 @@ testimonialDots.forEach(dot => {
     });
 });
 
-// ==================== CONTACT FORM ====================
 const contactForm = document.getElementById('contact-form');
-
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    
-    // Show success message (you can replace this with actual form submission)
+    const name = contactForm.querySelector('#contact-name');
+    const email = contactForm.querySelector('#contact-email');
+    const subject = contactForm.querySelector('#contact-subject');
+    const message = contactForm.querySelector('#contact-message');
+    const feedback = document.getElementById('contact-feedback');
+    let valid = true;
+    [name, email, subject, message].forEach(el => el.classList.remove('border-red-500'));
+    if (!name.value || name.value.trim().length < 3) { name.classList.add('border-red-500'); valid = false; }
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
+    if (!emailOk) { email.classList.add('border-red-500'); valid = false; }
+    if (!subject.value || subject.value.trim().length < 3) { subject.classList.add('border-red-500'); valid = false; }
+    if (!message.value || message.value.trim().length < 10) { message.classList.add('border-red-500'); valid = false; }
     const submitBtn = contactForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
-    
-    submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i> ¡Mensaje enviado!';
-    submitBtn.classList.add('bg-green-500');
-    submitBtn.classList.remove('from-amber-500', 'to-amber-600');
-    
-    // Reset after 3 seconds
+    if (!valid) { if (feedback) feedback.textContent = 'Por favor corrige los campos marcados.'; return; }
+    if (feedback) feedback.textContent = 'Enviando...';
+    submitBtn.disabled = true;
+    submitBtn.classList.add('opacity-75');
     setTimeout(() => {
         contactForm.reset();
-        submitBtn.innerHTML = originalText;
-        submitBtn.classList.remove('bg-green-500');
-        submitBtn.classList.add('from-amber-500', 'to-amber-600');
-    }, 3000);
-    
-    // Here you would normally send the data to a server
-    console.log('Form submitted:', Object.fromEntries(formData));
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-75');
+        submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i> ¡Mensaje enviado!';
+        submitBtn.classList.add('bg-green-500');
+        submitBtn.classList.remove('from-amber-500', 'to-amber-600');
+        setTimeout(() => {
+            submitBtn.innerHTML = originalText;
+            submitBtn.classList.remove('bg-green-500');
+            submitBtn.classList.add('from-amber-500', 'to-amber-600');
+            if (feedback) feedback.textContent = '';
+        }, 2000);
+    }, 800);
 });
 
 // ==================== VISITOR COUNTER ====================
@@ -381,3 +389,76 @@ if ('serviceWorker' in navigator) {
 */
 
 console.log('✅ Fundación Yonari - Website loaded successfully!');
+
+const tabContacto = document.getElementById('tab-contacto');
+const tabDonaciones = document.getElementById('tab-donaciones');
+const panelContacto = document.getElementById('panel-contacto');
+const panelDonaciones = document.getElementById('panel-donaciones');
+if (tabContacto && tabDonaciones && panelContacto && panelDonaciones) {
+  const activate = (target) => {
+    const isContacto = target === 'contacto';
+    panelContacto.classList.toggle('hidden', !isContacto);
+    panelDonaciones.classList.toggle('hidden', isContacto);
+    tabContacto.setAttribute('aria-selected', String(isContacto));
+    tabDonaciones.setAttribute('aria-selected', String(!isContacto));
+    if (isContacto) {
+      tabContacto.classList.add('bg-amber-600','text-white');
+      tabDonaciones.classList.remove('bg-amber-600','text-white');
+      tabDonaciones.classList.add('text-gray-300');
+    } else {
+      tabDonaciones.classList.add('bg-amber-600','text-white');
+      tabContacto.classList.remove('bg-amber-600','text-white');
+      tabContacto.classList.add('text-gray-300');
+    }
+  };
+  tabContacto.addEventListener('click', () => activate('contacto'));
+  tabDonaciones.addEventListener('click', () => activate('donaciones'));
+}
+
+/* merged in the primary contact form handler above */
+
+const donationForm = document.getElementById('donation-form');
+if (donationForm) {
+  const amountInput = donationForm.querySelector('#donation-amount');
+  const methodSelect = donationForm.querySelector('#donation-method');
+  const bankDetails = document.getElementById('bank-details');
+  const onlineNote = document.getElementById('online-payment-note');
+  const feedback = document.getElementById('donation-feedback');
+  donationForm.querySelectorAll('.preset-amount').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const val = btn.getAttribute('data-amount');
+      if (amountInput) amountInput.value = val;
+    });
+  });
+  if (methodSelect && bankDetails && onlineNote) {
+    const updateMethod = () => {
+      const online = methodSelect.value === 'online_payment';
+      bankDetails.classList.toggle('hidden', online);
+      onlineNote.classList.toggle('hidden', !online);
+    };
+    methodSelect.addEventListener('change', updateMethod);
+    updateMethod();
+  }
+  donationForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const donorName = donationForm.querySelector('#donor-name');
+    const donorEmail = donationForm.querySelector('#donor-email');
+    const consent = donationForm.querySelector('#donation-consent');
+    let valid = true;
+    [donorName, donorEmail, amountInput].forEach(el => el.classList.remove('border-red-500'));
+    if (!donorName.value || donorName.value.trim().length < 3) { donorName.classList.add('border-red-500'); valid = false; }
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(donorEmail.value);
+    if (!emailOk) { donorEmail.classList.add('border-red-500'); valid = false; }
+    if (!amountInput.value || Number(amountInput.value) < 1000) { amountInput.classList.add('border-red-500'); valid = false; }
+    if (!(consent && consent.checked)) { valid = false; }
+    const btn = donationForm.querySelector('button[type="submit"]');
+    if (!valid) { if (feedback) feedback.textContent = 'Por favor completa los campos requeridos.'; return; }
+    if (btn) { btn.disabled = true; btn.classList.add('opacity-75'); }
+    if (feedback) { feedback.textContent = 'Procesando...'; }
+    setTimeout(() => {
+      donationForm.reset();
+      if (btn) { btn.disabled = false; btn.classList.remove('opacity-75'); }
+      if (feedback) { feedback.textContent = 'Tu donación ha sido registrada. Sigue las instrucciones del método seleccionado.'; }
+    }, 1500);
+  });
+}

@@ -21,25 +21,22 @@
 <body class="bg-gray-900 text-gray-100 overflow-x-hidden">
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/573001234567" target="_blank" 
-       class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transform hover:scale-110 transition-all duration-300 group"
+    <a href="https://wa.me/573135968790" target="_blank" 
+       class="fixed bottom-6 right-6 z-50 w-14 h-14 flex items-center justify-center bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transform hover:scale-110 transition-all duration-300 group"
        aria-label="Contactar por WhatsApp">
-        <i class="fab fa-whatsapp text-3xl"></i>
+        <i class="fab fa-whatsapp text-2xl"></i>
         <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             ¡Escríbenos!
         </span>
     </a>
     
     <!-- Facebook Floating Button -->
-    <a href="https://facebook.com/fundacionyonari" target="_blank" 
-       class="fixed bottom-24 right-6 z-50 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transform hover:scale-110 transition-all duration-300 group"
+    <a href="https://facebook.com/fundacionyonari" target="_blank"
+       class="fixed bottom-20 right-6 z-50 w-14 h-14 flex items-center justify-center bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transform hover:scale-110 transition-all duration-300"
        aria-label="Visitar Facebook">
         <i class="fab fa-facebook-f text-2xl"></i>
-        <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            Síguenos
-        </span>
     </a>
-
+    
     <!-- Header/Navigation -->
     <header class="fixed top-0 w-full z-40 bg-gray-900/95 backdrop-blur-md border-b border-amber-500/30 transition-all duration-300" id="navbar">
         <nav class="container mx-auto px-6 py-4">
@@ -74,6 +71,7 @@
                         ¿POR QUÉ LO HACEMOS?
                         <span class="absolute bottom-0 left-0 w-full h-0.5 bg-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
+                    
                     <a href="#contacto" class="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-amber-500/50 transform hover:scale-105 transition-all duration-300">
                         CONTACTAR
                     </a>
@@ -92,6 +90,7 @@
                 <a href="#servicios" class="block text-gray-300 hover:text-amber-500 hover:bg-amber-500/10 px-4 py-2 rounded-lg transition-all duration-300">SERVICIOS</a>
                 <a href="#equipo" class="block text-gray-300 hover:text-amber-500 hover:bg-amber-500/10 px-4 py-2 rounded-lg transition-all duration-300">NUESTRO EQUIPO</a>
                 <a href="#porque" class="block text-gray-300 hover:text-amber-500 hover:bg-amber-500/10 px-4 py-2 rounded-lg transition-all duración-300">¿POR QUÉ LO HACEMOS?</a>
+                
                 <a href="#contacto" class="block bg-gradient-to-r from-amber-500 to-amber-600 text-white px-4 py-2 rounded-lg text-center font-semibold">CONTACTAR</a>
             </div>
         </nav>
@@ -151,6 +150,108 @@
             <i class="fas fa-chevron-down text-amber-500 text-2xl"></i>
         </div>
     </section>
+
+    <!-- Donations Section -->
+    <!-- Donations Section (removed)
+    <section id="donaciones" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                    <span class="gradient-text">DONACIONES</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 mx-auto mb-4"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Tu aporte nos ayuda a derribar barreras y acercar la justicia a quienes más lo necesitan.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-amber-500/30" data-aos="fade-right">
+                    <div class="mb-6">
+                        <div class="inline-flex rounded-full border border-amber-500/40 bg-gray-800/50 overflow-hidden">
+                            <button id="tab-contacto" class="px-5 py-2 text-sm font-semibold text-white bg-amber-600">Contacto</button>
+                            <button id="tab-donaciones" class="px-5 py-2 text-sm font-semibold text-gray-300">Donaciones</button>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <button id="tab-contacto" class="px-4 py-2 rounded-full bg-amber-600 text-white font-semibold">Contacto</button>
+                        <button id="tab-donaciones" class="px-4 py-2 rounded-full bg-gray-700 text-gray-300 border border-gray-600">Donaciones</button>
+                    </div>
+                    <div id="form-contacto">
+                    <form id="donation-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">Nombre completo</label>
+                                <input type="text" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">Correo electrónico</label>
+                                <input type="email" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="tu@email.com">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">Monto (COP)</label>
+                                <input type="number" min="1000" step="1000" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="50,000">
+                                <div class="flex gap-2 mt-2">
+                                    <button type="button" class="preset-amount px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full border border-amber-500/30">20,000</button>
+                                    <button type="button" class="preset-amount px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full border border-amber-500/30">50,000</button>
+                                    <button type="button" class="preset-amount px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full border border-amber-500/30">100,000</button>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">Frecuencia</label>
+                                <select class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300">
+                                    <option>Única</option>
+                                    <option>Mensual</option>
+                                    <option>Trimestral</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-300 mb-2">Método</label>
+                                <select class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duración-300">
+                                    <option>Transferencia bancaria</option>
+                                    <option>Pago electrónico (Próximamente)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-300 mb-2">Mensaje (opcional)</label>
+                            <textarea rows="4" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300 resize-none" placeholder="Cuéntanos algo sobre tu donación"></textarea>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" required class="mt-1 rounded border-gray-600 bg-gray-700/50">
+                            <p class="text-sm text-gray-400">Acepto el tratamiento de mis datos conforme a la política de privacidad de la Fundación Yonari.</p>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold py-4 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transform hover:scale-105 transition-all duration-300">
+                            Donar ahora
+                            <i class="fas fa-heart ml-2"></i>
+                        </button>
+                    </form>
+                    </div>
+                </div>
+                
+                <div class="space-y-6" data-aos="fade-left">
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-amber-500/30">
+                        <h3 class="font-semibold text-white mb-4">Transferencia bancaria</h3>
+                        <ul class="text-gray-400 space-y-1">
+                            <li><span class="text-amber-500 font-semibold">Banco:</span> Bancolombia</li>
+                            <li><span class="text-amber-500 font-semibold">Tipo de cuenta:</span> Ahorros</li>
+                            <li><span class="text-amber-500 font-semibold">Número de cuenta:</span> 0000000000</li>
+                            <li><span class="text-amber-500 font-semibold">Titular:</span> Fundación Yonari</li>
+                            <li><span class="text-amber-500 font-semibold">NIT:</span> 000000000-0</li>
+                        </ul>
+                        <p class="text-xs text-gray-500 mt-3">Una vez realices la transferencia, por favor envíanos el soporte al correo info@fundacionyonari.org</p>
+                    </div>
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-amber-500/30">
+                        <h3 class="font-semibold text-white mb-4">Pago electrónico</h3>
+                        <p class="text-gray-400">Pronto habilitaremos pagos en línea para facilitar tus donaciones de forma segura.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
 
     <!-- About Section -->
     <section id="nosotros" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative">
@@ -442,30 +543,107 @@
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                <!-- Contact Form -->
                 <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-amber-500/30" data-aos="fade-right">
-                    <form id="contact-form" class="space-y-6">
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-300 mb-2">Nombre completo</label>
-                            <input type="text" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="Tu nombre">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-300 mb-2">Correo electrónico</label>
-                            <input type="email" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="tu@email.com">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-300 mb-2">Teléfono</label>
-                            <input type="tel" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="+57 300 123 4567">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-300 mb-2">Mensaje</label>
-                            <textarea rows="5" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300 resize-none" placeholder="Cuéntanos en qué podemos ayudarte"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold py-4 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transform hover:scale-105 transition-all duration-300">
-                            Enviar mensaje
-                            <i class="fas fa-paper-plane ml-2"></i>
-                        </button>
-                    </form>
+                    <div role="tablist" aria-label="Formularios" class="inline-flex rounded-full border border-amber-500/40 bg-gray-800/50 overflow-hidden mb-6">
+                        <button id="tab-contacto" role="tab" aria-selected="true" aria-controls="panel-contacto" class="px-5 py-2 text-sm font-semibold text-white bg-amber-600">Contacto</button>
+                        <button id="tab-donaciones" role="tab" aria-selected="false" aria-controls="panel-donaciones" class="px-5 py-2 text-sm font-semibold text-gray-300">Donaciones</button>
+                    </div>
+                    <div id="panel-contacto" role="tabpanel" aria-labelledby="tab-contacto">
+                        <form id="contact-form" class="space-y-6" novalidate>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="contact-name" class="block text-sm font-semibold text-gray-300 mb-2">Nombre completo</label>
+                                    <input id="contact-name" name="name" type="text" required minlength="3" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="Tu nombre">
+                                </div>
+                                <div>
+                                    <label for="contact-email" class="block text-sm font-semibold text-gray-300 mb-2">Correo electrónico</label>
+                                    <input id="contact-email" name="email" type="email" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="tu@email.com" inputmode="email" autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="contact-phone" class="block text-sm font-semibold text-gray-300 mb-2">Teléfono</label>
+                                    <input id="contact-phone" name="phone" type="tel" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="+57 313 596 8790" inputmode="tel" autocomplete="tel">
+                                </div>
+                                <div>
+                                    <label for="contact-subject" class="block text-sm font-semibold text-gray-300 mb-2">Asunto</label>
+                                    <input id="contact-subject" name="subject" type="text" required minlength="3" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="Motivo del mensaje">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="contact-message" class="block text-sm font-semibold text-gray-300 mb-2">Mensaje</label>
+                                <textarea id="contact-message" name="message" rows="5" required minlength="10" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300 resize-none" placeholder="Cuéntanos en qué podemos ayudarte"></textarea>
+                            </div>
+                            <div aria-live="polite" id="contact-feedback" class="text-sm"></div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold py-4 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transform hover:scale-105 transition-all duration-300">
+                                Enviar mensaje
+                                <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div id="panel-donaciones" role="tabpanel" aria-labelledby="tab-donaciones" class="hidden">
+                        <form id="donation-form" class="space-y-6" novalidate>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="donor-name" class="block text-sm font-semibold text-gray-300 mb-2">Nombre completo</label>
+                                    <input id="donor-name" name="donor_name" type="text" required minlength="3" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="Tu nombre">
+                                </div>
+                                <div>
+                                    <label for="donor-email" class="block text-sm font-semibold text-gray-300 mb-2">Correo electrónico</label>
+                                    <input id="donor-email" name="donor_email" type="email" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="tu@email.com" inputmode="email" autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div>
+                                    <label for="donation-amount" class="block text-sm font-semibold text-gray-300 mb-2">Monto (COP)</label>
+                                    <input id="donation-amount" name="amount" type="number" min="1000" step="1000" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="50,000">
+                                    <div class="flex gap-2 mt-2">
+                                        <button type="button" class="preset-amount px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full border border-amber-500/30" data-amount="20000">20,000</button>
+                                        <button type="button" class="preset-amount px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full border border-amber-500/30" data-amount="50000">50,000</button>
+                                        <button type="button" class="preset-amount px-3 py-1 bg-amber-500/10 text-amber-500 rounded-full border border-amber-500/30" data-amount="100000">100,000</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="donation-frequency" class="block text-sm font-semibold text-gray-300 mb-2">Frecuencia</label>
+                                    <select id="donation-frequency" name="frequency" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300">
+                                        <option value="one_time">Única</option>
+                                        <option value="monthly">Mensual</option>
+                                        <option value="quarterly">Trimestral</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="donation-method" class="block text-sm font-semibold text-gray-300 mb-2">Método</label>
+                                    <select id="donation-method" name="method" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300">
+                                        <option value="bank_transfer">Transferencia bancaria</option>
+                                        <option value="online_payment">Pago electrónico (Próximamente)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="bank-details" class="bg-gray-800/50 border border-amber-500/30 rounded-lg p-4 text-sm text-gray-300">
+                                <p><span class="text-amber-500 font-semibold">Banco:</span> Bancolombia</p>
+                                <p><span class="text-amber-500 font-semibold">Tipo de cuenta:</span> Ahorros</p>
+                                <p><span class="text-amber-500 font-semibold">Número de cuenta:</span> 0000000000</p>
+                                <p><span class="text-amber-500 font-semibold">Titular:</span> Fundación Yonari</p>
+                                <p><span class="text-amber-500 font-semibold">NIT:</span> 000000000-0</p>
+                            </div>
+                            <div id="online-payment-note" class="hidden bg-amber-500/10 border border-amber-500/30 rounded-lg p-4 text-sm text-amber-500">
+                                <p>Pronto habilitaremos pagos electrónicos seguros. Por ahora, usa la transferencia bancaria.</p>
+                            </div>
+                            <div>
+                                <label for="donation-message" class="block text-sm font-semibold text-gray-300 mb-2">Mensaje (opcional)</label>
+                                <textarea id="donation-message" name="notes" rows="4" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300 resize-none" placeholder="Cuéntanos algo sobre tu donación"></textarea>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <input id="donation-consent" name="consent" type="checkbox" required class="mt-1 rounded border-gray-600 bg-gray-700/50">
+                                <label for="donation-consent" class="text-sm text-gray-400">Acepto el tratamiento de mis datos conforme a la política de privacidad de la Fundación Yonari.</label>
+                            </div>
+                            <div aria-live="polite" id="donation-feedback" class="text-sm"></div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold py-4 rounded-lg hover:shadow-lg hover:shadow-amber-500/50 transform hover:scale-105 transition-all duration-300">
+                                Donar ahora
+                                <i class="fas fa-heart ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
                 </div>
                 
                 <!-- Contact Info -->
@@ -475,18 +653,28 @@
                             <i class="fas fa-envelope text-2xl text-amber-500"></i>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-white mb-1">Email</h3>
-                            <p class="text-gray-400">info@fundacionyonari.org</p>
+                            <h3 class="font-semibold text-white mb-1">Contáctanos</h3>
+                            <p class="text-gray-400"><a href="mailto:contacto@fundacionyonari.org" class="hover:underline">contacto@fundacionyonari.org</a></p>
                         </div>
                     </div>
                     
                     <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-amber-500/30 flex items-start space-x-4 hover:border-amber-500 transition-colors duration-300">
                         <div class="bg-amber-500/10 p-4 rounded-lg">
-                            <i class="fas fa-phone text-2xl text-amber-500"></i>
+                            <i class="fab fa-whatsapp text-2xl text-amber-500"></i>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-white mb-1">Teléfono</h3>
-                            <p class="text-gray-400">+57 300 123 4567</p>
+                            <h3 class="font-semibold text-white mb-1">WhatsApp</h3>
+                            <p class="text-gray-400"><a href="https://wa.me/573135968790" target="_blank" rel="noopener" class="hover:underline">313 596 8790</a></p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-amber-500/30 flex items-start space-x-4 hover:border-amber-500 transition-colors duration-300">
+                        <div class="bg-amber-500/10 p-4 rounded-lg">
+                            <i class="fas fa-envelope-open-text text-2xl text-amber-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-1">Solo para notificaciones judiciales</h3>
+                            <p class="text-gray-400"><a href="mailto:notificacionjudicial@fundacionyonari.org" class="hover:underline">notificacionjudicial@fundacionyonari.org</a></p>
                         </div>
                     </div>
                     
@@ -524,7 +712,7 @@
                             <a href="https://twitter.com/fundacionyonari" target="_blank" class="bg-blue-400 text-white p-3 rounded-lg hover:bg-blue-500 transform hover:scale-110 transition-all duration-300">
                                 <i class="fab fa-twitter text-xl"></i>
                             </a>
-                            <a href="https://wa.me/573001234567" target="_blank" class="bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 transform hover:scale-110 transition-all duration-300">
+                            <a href="https://wa.me/573135968790" target="_blank" class="bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 transform hover:scale-110 transition-all duration-300">
                                 <i class="fab fa-whatsapp text-xl"></i>
                             </a>
                         </div>
@@ -575,8 +763,9 @@
                 <div>
                     <h3 class="text-sm font-semibold text-white mb-4">Contacto</h3>
                     <div class="space-y-2 text-sm text-gray-400">
-                        <p><i class="fas fa-envelope text-amber-500 mr-2"></i> info@fundacionyonari.org</p>
-                        <p><i class="fas fa-phone text-amber-500 mr-2"></i> +57 300 123 4567</p>
+                        <p><i class="fas fa-envelope text-amber-500 mr-2"></i> <a href="mailto:contacto@fundacionyonari.org" class="hover:underline">contacto@fundacionyonari.org</a></p>
+                        <p><i class="fas fa-envelope-open-text text-amber-500 mr-2"></i> <a href="mailto:notificacionjudicial@fundacionyonari.org" class="hover:underline">notificacionjudicial@fundacionyonari.org</a></p>
+                        <p><i class="fab fa-whatsapp text-amber-500 mr-2"></i> <a href="https://wa.me/573135968790" target="_blank" rel="noopener" class="hover:underline">313 596 8790</a></p>
                         <p><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i> Bogotá, Colombia</p>
                     </div>
                 </div>
