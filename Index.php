@@ -58,8 +58,8 @@
                         INICIO
                         <span class="absolute bottom-0 left-0 w-full h-0.5 bg-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
-                    <a href="#nosotros" class="nav-link text-sm font-semibold text-gray-300 hover:text-amber-500 transition-colors duration-300 relative group">
-                        NOSOTROS
+                    <a href="#nosotros" class="nav-link text-sm font-semibold text-gray-300 hover:text-amber-500 transition-colors duración-300 relative group">
+                        ACERCA DE NOSOTROS
                         <span class="absolute bottom-0 left-0 w-full h-0.5 bg-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
                     <a href="#servicios" class="nav-link text-sm font-semibold text-gray-300 hover:text-amber-500 transition-colors duration-300 relative group">
@@ -67,11 +67,11 @@
                         <span class="absolute bottom-0 left-0 w-full h-0.5 bg-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
                     <a href="#equipo" class="nav-link text-sm font-semibold text-gray-300 hover:text-amber-500 transition-colors duration-300 relative group">
-                        EQUIPO
+                        NUESTRO EQUIPO
                         <span class="absolute bottom-0 left-0 w-full h-0.5 bg-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
                     <a href="#porque" class="nav-link text-sm font-semibold text-gray-300 hover:text-amber-500 transition-colors duration-300 relative group">
-                        ¿POR QUÉ?
+                        ¿POR QUÉ LO HACEMOS?
                         <span class="absolute bottom-0 left-0 w-full h-0.5 bg-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
                     <a href="#contacto" class="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-amber-500/50 transform hover:scale-105 transition-all duration-300">
@@ -88,10 +88,10 @@
             <!-- Mobile Navigation -->
             <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 space-y-3">
                 <a href="#inicio" class="block text-gray-300 hover:text-amber-500 hover:bg-amber-500/10 px-4 py-2 rounded-lg transition-all duration-300">INICIO</a>
-                <a href="#nosotros" class="block text-gray-300 hover:text-amber-500 hover:bg-amber-500/10 px-4 py-2 rounded-lg transition-all duration-300">NOSOTROS</a>
+                <a href="#nosotros" class="block text-gray-300 hover:text-amber-500 hover:bg-amber-500/10 px-4 py-2 rounded-lg transition-all duration-300">ACERCA DE NOSOTROS</a>
                 <a href="#servicios" class="block text-gray-300 hover:text-amber-500 hover:bg-amber-500/10 px-4 py-2 rounded-lg transition-all duration-300">SERVICIOS</a>
-                <a href="#equipo" class="block text-gray-300 hover:text-amber-500 hover:bg-amber-500/10 px-4 py-2 rounded-lg transition-all duration-300">EQUIPO</a>
-                <a href="#porque" class="block text-gray-300 hover:text-amber-500 hover:bg-amber-500/10 px-4 py-2 rounded-lg transition-all duration-300">¿POR QUÉ?</a>
+                <a href="#equipo" class="block text-gray-300 hover:text-amber-500 hover:bg-amber-500/10 px-4 py-2 rounded-lg transition-all duration-300">NUESTRO EQUIPO</a>
+                <a href="#porque" class="block text-gray-300 hover:text-amber-500 hover:bg-amber-500/10 px-4 py-2 rounded-lg transition-all duración-300">¿POR QUÉ LO HACEMOS?</a>
                 <a href="#contacto" class="block bg-gradient-to-r from-amber-500 to-amber-600 text-white px-4 py-2 rounded-lg text-center font-semibold">CONTACTAR</a>
             </div>
         </nav>
@@ -109,7 +109,7 @@
                 <!-- Hero Content -->
                 <div class="space-y-6" data-aos="fade-right">
                     <h1 class="text-5xl lg:text-6xl font-bold leading-tight">
-                        <span class="gradient-text">PROTEGE TUS DERECHOS</span>
+                        <span class="gradient-text">PROTÉGE TUS DERECHOS</span>
                     </h1>
                     <p class="text-xl text-gray-400 leading-relaxed">
                         Estamos contigo para que hagas valer tus derechos. Recibe apoyo jurídico oportuno de la Fundación Yonari y accede a la justicia de manera segura, clara y sin obstáculos.
@@ -153,7 +153,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="nosotros" class="py-20 relative">
+    <section id="nosotros" class="py-20 bg-gradient-to-b from-gray-900 to-gray-800 relative">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl lg:text-5xl font-bold mb-4">
@@ -192,7 +192,7 @@
             
             <!-- Mission & Vision -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-amber-500/30 hover:border-amber-500/60 transition-all duration-300 transform hover:scale-105" data-aos="flip-left">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-amber-500/30 ring-1 ring-amber-500/30 hover:ring-amber-500/60 shadow-lg transition-all duration-300" data-aos="flip-left">
                     <div class="flex items-center space-x-4 mb-4">
                         <div class="bg-amber-500/10 p-4 rounded-lg">
                             <i class="fas fa-bullseye text-3xl text-amber-500"></i>
@@ -200,11 +200,11 @@
                         <h3 class="text-2xl font-bold gradient-text">Misión</h3>
                     </div>
                     <p class="text-gray-300 leading-relaxed">
-                        Somos una fundación jurídica comprometida con la defensa y promoción de los derechos de las personas, familias, comunidades y organizaciones en Colombia. A través de un equipo de profesionales con profunda vocación de servicio, trabajamos para eliminar las barreras que limitan el acceso a la justicia, brindando acompañamiento integral, orientación y representación jurídica.
+                        Somos una fundación jurídica comprometida con la defensa y promoción de los derechos de las personas, familias, comunidades y organizaciones en Colombia. A través de un equipo de profesionales con profunda vocación de servicio, trabajamos para eliminar las barreras que limitan el acceso a la justicia, brindando acompañamiento integral, orientación y representación jurídica. Nuestro propósito es garantizar que la justicia, la dignidad y el bienestar sean una realidad para todos, especialmente para quienes enfrentan condiciones de vulnerabilidad.
                     </p>
                 </div>
                 
-                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-amber-500/30 hover:border-amber-500/60 transition-all duration-300 transform hover:scale-105" data-aos="flip-right">
+                <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-amber-500/30 ring-1 ring-amber-500/30 hover:ring-amber-500/60 shadow-lg transition-all duration-300" data-aos="flip-right">
                     <div class="flex items-center space-x-4 mb-4">
                         <div class="bg-amber-500/10 p-4 rounded-lg">
                             <i class="fas fa-eye text-3xl text-amber-500"></i>
@@ -212,7 +212,7 @@
                         <h3 class="text-2xl font-bold gradient-text">Visión</h3>
                     </div>
                     <p class="text-gray-300 leading-relaxed">
-                        Ser una organización referente a nivel nacional por nuestra excelencia, compromiso y humanidad en la defensa de los derechos y el acceso a la justicia. Aspiramos a consolidarnos como una entidad líder en la transformación social y jurídica del país, generando entornos más justos, equitativos e incluyentes.
+                        Ser una organización referente a nivel nacional por nuestra excelencia, compromiso y humanidad en la defensa de los derechos y el acceso a la justicia. Aspiramos a consolidarnos como una entidad líder en la transformación social y jurídica del país, generando entornos más justos, equitativos e incluyentes donde cada persona y comunidad pueda ejercer plenamente sus derechos y construir un futuro digno y sostenible.
                     </p>
                 </div>
             </div>
@@ -228,45 +228,100 @@
                 </h2>
                 <div class="w-24 h-1 bg-gradient-to-r from-amber-500 to-amber-600 mx-auto mb-4"></div>
                 <p class="text-gray-400 max-w-2xl mx-auto">
-                    Ofrecemos servicios especializados para garantizar el acceso a la justicia y la protección de tus derechos
+                    En la Fundación Yonari nos mueve una vocación auténtica por servir a las personas, familias y comunidades, brindando acompañamiento jurídico con calidez humana y profesionalismo.
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Service 1 -->
                 <div class="group bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-amber-500/30 hover:border-amber-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/20" data-aos="zoom-in" data-aos-delay="100">
                     <div class="bg-amber-500/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors duration-300">
-                        <i class="fas fa-graduation-cap text-3xl text-amber-500"></i>
+                        <i class="fas fa-balance-scale text-3xl text-amber-500"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Educación</h3>
-                    <p class="text-gray-400">Talleres, mentorías y apoyo escolar para el desarrollo integral de las comunidades.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Derecho Administrativo</h3>
+                    <ul class="text-gray-400 space-y-1 list-disc pl-5">
+                        <li>Nulidad</li>
+                        <li>Nulidad y Restablecimiento del Derecho</li>
+                        <li>Reparación Directa</li>
+                        <li>Contractual</li>
+                        <li>Ejecutivo</li>
+                        <li>Otros servicios</li>
+                    </ul>
                 </div>
                 
-                <!-- Service 2 -->
+                <div class="group bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-amber-500/30 hover:border-amber-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/20" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="bg-amber-500/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors duration-300">
+                        <i class="fas fa-university text-3xl text-amber-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Derecho Constitucional</h3>
+                    <ul class="text-gray-400 space-y-1 list-disc pl-5">
+                        <li>Acción de Tutela</li>
+                        <li>Hábeas corpus</li>
+                        <li>Acción Popular</li>
+                        <li>Acción de Grupo</li>
+                        <li>Derecho de petición</li>
+                        <li>Otros servicios</li>
+                    </ul>
+                </div>
+                
                 <div class="group bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-amber-500/30 hover:border-amber-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/20" data-aos="zoom-in" data-aos-delay="200">
                     <div class="bg-amber-500/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors duration-300">
-                        <i class="fas fa-hands-helping text-3xl text-amber-500"></i>
+                        <i class="fas fa-users text-3xl text-amber-500"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Apoyo Social</h3>
-                    <p class="text-gray-400">Orientación y acceso a redes de ayuda para personas y familias en situación de vulnerabilidad.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Derecho de Familia</h3>
+                    <ul class="text-gray-400 space-y-1 list-disc pl-5">
+                        <li>Proceso de divorcio</li>
+                        <li>Separación de cuerpos y bienes</li>
+                        <li>Custodia y cuidado personal</li>
+                        <li>Regulación de alimentos</li>
+                        <li>Sucesiones y particiones</li>
+                        <li>Procesos de filiación</li>
+                        <li>Otros servicios</li>
+                    </ul>
                 </div>
                 
-                <!-- Service 3 -->
+                <div class="group bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-amber-500/30 hover:border-amber-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/20" data-aos="zoom-in" data-aos-delay="250">
+                    <div class="bg-amber-500/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors duration-300">
+                        <i class="fas fa-briefcase text-3xl text-amber-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Derecho Laboral</h3>
+                    <ul class="text-gray-400 space-y-1 list-disc pl-5">
+                        <li>Demandas laborales</li>
+                        <li>Defensa en demandas laborales</li>
+                        <li>Otros servicios</li>
+                    </ul>
+                </div>
+                
                 <div class="group bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-amber-500/30 hover:border-amber-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/20" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="bg-amber-500/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors duration-300">
+                        <i class="fas fa-shield-alt text-3xl text-amber-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Régimen Disciplinario Especial (Próximamente)</h3>
+                    <ul class="text-gray-400 space-y-1 list-disc pl-5">
+                        <li>Miembros de las Fuerzas Militares – Ejército, Armada, Fuerza Aérea</li>
+                        <li>Policía Nacional</li>
+                    </ul>
+                </div>
+                
+                <div class="group bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-amber-500/30 hover:border-amber-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/20" data-aos="zoom-in" data-aos-delay="350">
                     <div class="bg-amber-500/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors duration-300">
                         <i class="fas fa-gavel text-3xl text-amber-500"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Defensa de Derechos</h3>
-                    <p class="text-gray-400">Acompañamiento y asesoría jurídica profesional para garantizar tus derechos.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Derecho Penal (Próximamente)</h3>
+                    <ul class="text-gray-400 space-y-1 list-disc pl-5">
+                        <li>Defensa Técnica en Procesos Penales</li>
+                        <li>Otros servicios</li>
+                    </ul>
                 </div>
                 
-                <!-- Service 4 -->
                 <div class="group bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-amber-500/30 hover:border-amber-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/20" data-aos="zoom-in" data-aos-delay="400">
                     <div class="bg-amber-500/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors duration-300">
-                        <i class="fas fa-users-cog text-3xl text-amber-500"></i>
+                        <i class="fas fa-print text-3xl text-amber-500"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Desarrollo Comunitario</h3>
-                    <p class="text-gray-400">Acciones participativas con impacto local para fortalecer las comunidades.</p>
+                    <h3 class="text-xl font-bold text-white mb-3">Sistema de Responsabilidad Penal Para Adolescentes (Próximamente)</h3>
+                    <ul class="text-gray-400 space-y-1 list-disc pl-5">
+                        <li>Defensa Técnica en Procesos Penales</li>
+                        <li>Otros servicios</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -285,42 +340,31 @@
                 </p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <!-- Team Member 1 -->
                 <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-amber-500/30 hover:border-amber-500 transition-all duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
                     <div class="aspect-square bg-gradient-to-br from-amber-500/20 to-amber-600/20 flex items-center justify-center">
-                        <i class="fas fa-user-tie text-8xl text-amber-500/50"></i>
+                        <img src="Src/assets/img/Eddy.png" alt="EDDY LUIS VALOYES ORTIZ" class="w-full h-full object-cover" loading="lazy">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-1">Eddy Martínez</h3>
-                        <p class="text-amber-500 mb-3">Director General</p>
-                        <p class="text-gray-400 text-sm">Abogado especializado en derechos humanos con más de 10 años de experiencia.</p>
+                        <h3 class="text-xl font-bold text-white mb-1">EDDY LUIS VALOYES ORTIZ</h3>
+                        <p class="text-amber-500 mb-3">Abogado – Presidente de la Fundación.</p>
+                        <p class="text-gray-400 text-sm"></p>
                     </div>
                 </div>
                 
                 <!-- Team Member 2 -->
                 <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-amber-500/30 hover:border-amber-500 transition-all duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
                     <div class="aspect-square bg-gradient-to-br from-amber-500/20 to-amber-600/20 flex items-center justify-center">
-                        <i class="fas fa-user-tie text-8xl text-amber-500/50"></i>
+                        <img src="Src/assets/img/Darleyda.png" alt="DARLEYDA VALOYES RODRIGUEZ" class="w-full h-full object-cover" loading="lazy">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-1">Darleyda Córdoba</h3>
-                        <p class="text-amber-500 mb-3">Asesora Jurídica</p>
-                        <p class="text-gray-400 text-sm">Especialista en derecho civil y familia, comprometida con la justicia social.</p>
+                        <h3 class="text-xl font-bold text-white mb-1">DARLEYDA VALOYES RODRIGUEZ</h3>
+                        <p class="text-amber-500 mb-3">Abogada – Vicepresidenta de la Fundación</p>
+                        <p class="text-gray-400 text-sm"></p>
                     </div>
                 </div>
                 
-                <!-- Team Member 3 -->
-                <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-amber-500/30 hover:border-amber-500 transition-all duration-300 transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
-                    <div class="aspect-square bg-gradient-to-br from-amber-500/20 to-amber-600/20 flex items-center justify-center">
-                        <i class="fas fa-user-tie text-8xl text-amber-500/50"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-1">María González</h3>
-                        <p class="text-amber-500 mb-3">Coordinadora Social</p>
-                        <p class="text-gray-400 text-sm">Trabajadora social dedicada al desarrollo comunitario y apoyo integral.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -340,32 +384,26 @@
                     <div class="space-y-6 text-lg text-gray-300 leading-relaxed">
                         <p>
                             <i class="fas fa-quote-left text-amber-500 mr-2"></i>
-                            Nuestra motivación nace de la convicción de que todos merecen vivir en dignidad y con sus derechos garantizados.
+                            Lo hacemos porque estamos comprometidos con construir un país más justo, solidario e inclusivo, donde cada persona tenga la posibilidad real de defender su dignidad y acceder a la administración de justicia sin límites ni exclusiones.
                             <i class="fas fa-quote-right text-amber-500 ml-2"></i>
-                        </p>
-                        <p>
-                            Trabajamos porque creemos en un Colombia donde la justicia no sea un privilegio, sino un derecho universal. Cada caso que atendemos, cada familia que acompañamos, representa un paso más hacia una sociedad más equitativa.
-                        </p>
-                        <p>
-                            Nuestro compromiso va más allá de la asesoría legal: buscamos empoderar a las comunidades, educar sobre derechos y construir redes de apoyo que perduren en el tiempo.
                         </p>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                         <div class="text-center p-6 bg-white/5 rounded-lg border border-amber-500/20">
                             <i class="fas fa-heart text-4xl text-amber-500 mb-3"></i>
-                            <h4 class="font-semibold text-white">Pasión</h4>
-                            <p class="text-sm text-gray-400 mt-2">Por servir y transformar vidas</p>
+                            <h4 class="font-semibold text-white">Necesidades reales</h4>
+                            <p class="text-sm text-gray-400 mt-2">Porque miles de personas y comunidades en Colombia siguen enfrentando barreras económicas, sociales y territoriales que les impiden ejercer sus derechos y acceder a una defensa jurídica digna.</p>
                         </div>
                         <div class="text-center p-6 bg-white/5 rounded-lg border border-amber-500/20">
                             <i class="fas fa-users text-4xl text-amber-500 mb-3"></i>
-                            <h4 class="font-semibold text-white">Comunidad</h4>
-                            <p class="text-sm text-gray-400 mt-2">Trabajamos juntos por el bien común</p>
+                            <h4 class="font-semibold text-white">Impacto sostenible</h4>
+                            <p class="text-sm text-gray-400 mt-2">Porque cada intervención jurídica fortalece capacidades, transforma entornos y genera cambios duraderos que permiten a las personas y comunidades vivir con mayor justicia, autonomía y dignidad.</p>
                         </div>
                         <div class="text-center p-6 bg-white/5 rounded-lg border border-amber-500/20">
                             <i class="fas fa-star text-4xl text-amber-500 mb-3"></i>
-                            <h4 class="font-semibold text-white">Excelencia</h4>
-                            <p class="text-sm text-gray-400 mt-2">Comprometidos con la calidad</p>
+                            <h4 class="font-semibold text-white">Labor social</h4>
+                            <p class="text-sm text-gray-400 mt-2">Porque acompañamos, orientamos y defendemos a quienes históricamente han sido excluidos, promoviendo justicia, equidad y oportunidades reales para mejorar su calidad de vida y la de sus comunidades.</p>
                         </div>
                     </div>
                 </div>
@@ -516,7 +554,7 @@
                     <h3 class="text-sm font-semibold text-white mb-4">Enlaces rápidos</h3>
                     <div class="space-y-2">
                         <a href="#inicio" class="block text-sm text-gray-400 hover:text-amber-500 transition-colors duration-300">Inicio</a>
-                        <a href="#nosotros" class="block text-sm text-gray-400 hover:text-amber-500 transition-colors duration-300">Nosotros</a>
+                        <a href="#nosotros" class="block text-sm text-gray-400 hover:text-amber-500 transition-colors duración-300">Acerca de nosotros</a>
                         <a href="#servicios" class="block text-sm text-gray-400 hover:text-amber-500 transition-colors duration-300">Servicios</a>
                         <a href="#equipo" class="block text-sm text-gray-400 hover:text-amber-500 transition-colors duration-300">Equipo</a>
                     </div>
