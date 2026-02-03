@@ -1,10 +1,4 @@
 <?php
-// =====================================================
-// CONEXIÓN A BASE DE DATOS - FUNDACIÓN YONARI
-// =====================================================
-// Archivo: BD/conexion.php
-// Autor: Stivinson Correa Matura & William Renteria
-// =====================================================
 
 // Configuración de la base de datos
 define('DB_HOST', 'localhost:3306');

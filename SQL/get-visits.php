@@ -1,10 +1,4 @@
 <?php
-// =====================================================
-// CONTADOR DE VISITAS - FUNDACIÓN YONARI
-// =====================================================
-// Archivo: BD/get-visits.php
-// Autor: Stivinson Correa Matura & William Renteria
-// =====================================================
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
@@ -12,9 +6,6 @@ header('Access-Control-Allow-Origin: *');
 // Incluir archivo de conexión
 require_once 'conexion.php';
 
-// =====================================================
-// FUNCIONES AUXILIARES
-// =====================================================
 
 function getVisitorIP() {
     $ip_keys = [
@@ -45,9 +36,6 @@ function getUserAgent() {
     return $_SERVER['HTTP_USER_AGENT'] ?? 'Unknown';
 }
 
-// =====================================================
-// OBTENER CONEXIÓN
-// =====================================================
 $pdo = getDBConnection();
 
 if (!$pdo) {
@@ -60,16 +48,12 @@ if (!$pdo) {
     exit;
 }
 
-// =====================================================
-// OBTENER INFORMACIÓN DEL VISITANTE
-// =====================================================
+
 $visitor_ip = getVisitorIP();
 $navegador = getUserAgent();
 $fecha_actual = date('Y-m-d H:i:s');
 
-// =====================================================
-// VERIFICAR SI YA VISITÓ HOY
-// =====================================================
+
 $check_sql = "SELECT COUNT(*) as count FROM contador_vistas 
               WHERE IP = :ip 
               AND DATE(Fecha_visita) = CURDATE()";
@@ -81,9 +65,6 @@ try {
     
     $is_new_visit = ($result['count'] == 0);
     
-    // =====================================================
-    // REGISTRAR NUEVA VISITA
-    // =====================================================
     if ($is_new_visit) {
         $insert_sql = "INSERT INTO contador_vistas (Navegador, IP, Fecha_visita) 
                        VALUES (:navegador, :ip, :fecha)";
@@ -96,16 +77,12 @@ try {
         ]);
     }
     
-    // =====================================================
-    // OBTENER TOTAL DE VISITAS
-    // =====================================================
+    
     $count_sql = "SELECT COUNT(*) as total FROM contador_vistas";
     $stmt = $pdo->query($count_sql);
     $total = $stmt->fetch();
     
-    // =====================================================
-    // OBTENER ESTADÍSTICAS ADICIONALES
-    // =====================================================
+    
     $stats_sql = "SELECT 
         COUNT(*) as total_visitas,
         COUNT(DISTINCT IP) as visitantes_unicos,
@@ -116,9 +93,7 @@ try {
     $stmt = $pdo->query($stats_sql);
     $stats = $stmt->fetch();
     
-    // =====================================================
-    // VISITAS DE HOY
-    // =====================================================
+    
     $today_sql = "SELECT COUNT(*) as visitas_hoy 
                   FROM contador_vistas 
                   WHERE DATE(Fecha_visita) = CURDATE()";
@@ -126,9 +101,7 @@ try {
     $stmt = $pdo->query($today_sql);
     $today = $stmt->fetch();
     
-    // =====================================================
-    // RESPUESTA JSON
-    // =====================================================
+    
     echo json_encode([
         'success' => true,
         'visits' => (int)$total['total'],
