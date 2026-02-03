@@ -733,69 +733,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-t from-gray-900 to-gray-800 border-t border-amber-500/30 py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <!-- About -->
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-3">
-                        <img src="Src/assets/Logo/Fundacion-yonari.png" alt="Logo Fundación Yonari" class="h-12 w-auto rounded-lg">
-                        <span class="text-xl font-bold gradient-text">Fundación Yonari</span>
-                    </div>
-                    <p class="text-sm text-gray-400">Protege tus derechos, construyendo futuro juntos.</p>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-sm font-semibold text-white mb-4">Enlaces rápidos</h3>
-                    <div class="space-y-2">
-                        <a href="#inicio" class="block text-sm text-gray-400 hover:text-amber-500 transition-colors duration-300">Inicio</a>
-                        <a href="#nosotros" class="block text-sm text-gray-400 hover:text-amber-500 transition-colors duración-300">Acerca de nosotros</a>
-                        <a href="#servicios" class="block text-sm text-gray-400 hover:text-amber-500 transition-colors duration-300">Servicios</a>
-                        <a href="#equipo" class="block text-sm text-gray-400 hover:text-amber-500 transition-colors duration-300">Equipo</a>
-                    </div>
-                </div>
-                
-                <!-- Services -->
-                <div>
-                    <h3 class="text-sm font-semibold text-white mb-4">Servicios</h3>
-                    <div class="space-y-2">
-                        <p class="text-sm text-gray-400">Educación</p>
-                        <p class="text-sm text-gray-400">Apoyo Social</p>
-                        <p class="text-sm text-gray-400">Defensa de Derechos</p>
-                        <p class="text-sm text-gray-400">Desarrollo Comunitario</p>
-                    </div>
-                </div>
-                
-                <!-- Contact -->
-                <div>
-                    <h3 class="text-sm font-semibold text-white mb-4">Contacto</h3>
-                    <div class="space-y-2 text-sm text-gray-400">
-                        <p><i class="fas fa-envelope text-amber-500 mr-2"></i> <a href="mailto:contacto@fundacionyonari.org" class="hover:underline">contacto@fundacionyonari.org</a></p>
-                        <p><i class="fas fa-envelope-open-text text-amber-500 mr-2"></i> <a href="mailto:notificacionjudicial@fundacionyonari.org" class="hover:underline">notificacionjudicial@fundacionyonari.org</a></p>
-                        <p><i class="fab fa-whatsapp text-amber-500 mr-2"></i> <a href="https://wa.me/573135968790" target="_blank" rel="noopener" class="hover:underline">313 596 8790</a></p>
-                        <p><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i> Quibdó - Chocó – Colombia</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Bottom Footer -->
-            <div class="border-t border-white/10 pt-8">
-                <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-                    <p class="text-xs text-gray-400">© 2025 Fundación Yonari. Todos los derechos reservados.</p>
-                    <div class="flex items-center space-x-4">
-                        <p class="text-xs text-gray-400">Desarrollado con ❤️ por el equipo de Fundación Yonari</p>
-                        <!-- Visitor Counter -->
-                        <div class="flex items-center space-x-2 bg-amber-500/10 px-3 py-1 rounded-full border border-amber-500/30">
-                            <i class="fas fa-eye text-amber-500 text-xs"></i>
-                            <span class="text-xs text-amber-500 font-semibold" id="visitor-count">0</span>
-                            <span class="text-xs text-gray-400">visitas</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include 'Src/Pages/footer-final.php'; ?>
 
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
