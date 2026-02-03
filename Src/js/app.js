@@ -422,7 +422,7 @@ if (donationForm) {
   const amountInput = donationForm.querySelector('#donation-amount');
   const methodSelect = donationForm.querySelector('#donation-method');
   const bankDetails = document.getElementById('bank-details');
-  const onlineNote = document.getElementById('online-payment-note');
+  const nequiDetails = document.getElementById('nequi-details');
   const feedback = document.getElementById('donation-feedback');
   donationForm.querySelectorAll('.preset-amount').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -430,11 +430,11 @@ if (donationForm) {
       if (amountInput) amountInput.value = val;
     });
   });
-  if (methodSelect && bankDetails && onlineNote) {
+  if (methodSelect && bankDetails && nequiDetails) {
     const updateMethod = () => {
-      const online = methodSelect.value === 'online_payment';
-      bankDetails.classList.toggle('hidden', online);
-      onlineNote.classList.toggle('hidden', !online);
+      const isNequi = methodSelect.value === 'nequi';
+      bankDetails.classList.toggle('hidden', isNequi);
+      nequiDetails.classList.toggle('hidden', !isNequi);
     };
     methodSelect.addEventListener('change', updateMethod);
     updateMethod();

@@ -31,7 +31,7 @@
     </a>
     
     <!-- Facebook Floating Button -->
-    <a href="https://facebook.com/fundacionyonari" target="_blank"
+    <a href="https://www.facebook.com/profile.php?id=61586886801192" target="_blank"
        class="fixed bottom-20 right-6 z-50 w-14 h-14 flex items-center justify-center bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transform hover:scale-110 transition-all duration-300"
        aria-label="Visitar Facebook">
         <i class="fab fa-facebook-f text-2xl"></i>
@@ -509,7 +509,16 @@
                     </div>
                 </div>
             </div>
-            
+            <div class="max-w-6xl mx-auto mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="text-center p-6 bg-white/5 rounded-lg border border-amber-500/20">
+                    <p class="text-4xl font-extrabold text-amber-500">100</p>
+                    <p class="text-sm font-semibold text-white mt-1">FAMILIAS APOYADAS</p>
+                </div>
+                <div class="text-center p-6 bg-white/5 rounded-lg border border-amber-500/20">
+                    <p class="text-4xl font-extrabold text-amber-500">13</p>
+                    <p class="text-sm font-semibold text-white mt-1">AÑOS DE EXPERIENCIA</p>
+                </div>
+            </div>
             <!-- Testimonials -->
             <div class="max-w-4xl mx-auto mt-16" data-aos="fade-up">
                 <h3 class="text-2xl font-bold text-center mb-8 gradient-text">Testimonios</h3>
@@ -613,9 +622,9 @@
                                 </div>
                                 <div>
                                     <label for="donation-method" class="block text-sm font-semibold text-gray-300 mb-2">Método</label>
-                                    <select id="donation-method" name="method" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300">
-                                        <option value="bank_transfer">Transferencia bancaria</option>
-                                        <option value="online_payment">Pago electrónico (Próximamente)</option>
+                                    <select id="donation-method" name="method" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duración-300">
+                                        <option value="bancolombia">Bancolombia</option>
+                                        <option value="nequi">Nequi</option>
                                     </select>
                                 </div>
                             </div>
@@ -626,8 +635,9 @@
                                 <p><span class="text-amber-500 font-semibold">Titular:</span> Fundación Yonari</p>
                                 <p><span class="text-amber-500 font-semibold">NIT:</span> 000000000-0</p>
                             </div>
-                            <div id="online-payment-note" class="hidden bg-amber-500/10 border border-amber-500/30 rounded-lg p-4 text-sm text-amber-500">
-                                <p>Pronto habilitaremos pagos electrónicos seguros. Por ahora, usa la transferencia bancaria.</p>
+                            <div id="nequi-details" class="hidden bg-amber-500/10 border border-amber-500/30 rounded-lg p-4 text-sm text-amber-500">
+                                <p><span class="font-semibold">Nequi:</span> 313 596 8790</p>
+                                <p>Usa el número para transferir por Nequi. Envía el comprobante a contacto@fundacionyonari.org.</p>
                             </div>
                             <div>
                                 <label for="donation-message" class="block text-sm font-semibold text-gray-300 mb-2">Mensaje (opcional)</label>
@@ -684,7 +694,7 @@
                         </div>
                         <div>
                             <h3 class="font-semibold text-white mb-1">Ubicación</h3>
-                            <p class="text-gray-400">Bogotá, Colombia</p>
+                            <p class="text-gray-400">Quibdó - Chocó – Colombia</p>
                         </div>
                     </div>
                     
@@ -703,7 +713,7 @@
                     <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-amber-500/30">
                         <h3 class="font-semibold text-white mb-4">Síguenos en redes sociales</h3>
                         <div class="flex space-x-4">
-                            <a href="https://facebook.com/fundacionyonari" target="_blank" class="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transform hover:scale-110 transition-all duration-300">
+                            <a href="https://www.facebook.com/profile.php?id=61586886801192" target="_blank" class="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transform hover:scale-110 transition-all duration-300">
                                 <i class="fab fa-facebook-f text-xl"></i>
                             </a>
                             <a href="https://instagram.com/fundacionyonari" target="_blank" class="bg-pink-600 text-white p-3 rounded-lg hover:bg-pink-700 transform hover:scale-110 transition-all duration-300">
@@ -729,9 +739,7 @@
                 <!-- About -->
                 <div class="space-y-4">
                     <div class="flex items-center space-x-3">
-                        <div class="bg-gradient-to-br from-amber-500 to-amber-600 p-2 rounded-lg">
-                            <i class="fas fa-balance-scale text-white text-xl"></i>
-                        </div>
+                        <img src="Src/assets/Logo/Fundacion-yonari.png" alt="Logo Fundación Yonari" class="h-12 w-auto rounded-lg">
                         <span class="text-xl font-bold gradient-text">Fundación Yonari</span>
                     </div>
                     <p class="text-sm text-gray-400">Protege tus derechos, construyendo futuro juntos.</p>
@@ -766,7 +774,7 @@
                         <p><i class="fas fa-envelope text-amber-500 mr-2"></i> <a href="mailto:contacto@fundacionyonari.org" class="hover:underline">contacto@fundacionyonari.org</a></p>
                         <p><i class="fas fa-envelope-open-text text-amber-500 mr-2"></i> <a href="mailto:notificacionjudicial@fundacionyonari.org" class="hover:underline">notificacionjudicial@fundacionyonari.org</a></p>
                         <p><i class="fab fa-whatsapp text-amber-500 mr-2"></i> <a href="https://wa.me/573135968790" target="_blank" rel="noopener" class="hover:underline">313 596 8790</a></p>
-                        <p><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i> Bogotá, Colombia</p>
+                        <p><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i> Quibdó - Chocó – Colombia</p>
                     </div>
                 </div>
             </div>
