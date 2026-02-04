@@ -349,6 +349,9 @@ if (donationForm) {
     const bankDetails = document.getElementById('bank-details');
     const nequiDetails = document.getElementById('nequi-details');
     const feedback = document.getElementById('donation-feedback');
+    const receiptInput = donationForm.querySelector('#donation-receipt');
+    const receiptError = document.getElementById('receipt-error');
+    const receiptPreview = document.getElementById('receipt-preview');
     
     donationForm.querySelectorAll('.preset-amount').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -395,6 +398,7 @@ if (donationForm) {
         
         let valid = true;
         [donorName, donorEmail, amountInput].forEach(el => el.classList.remove('border-red-500'));
+        if (receiptError) receiptError.classList.add('hidden');
         
         if (!donorName.value || donorName.value.trim().length < 3) {
             donorName.classList.add('border-red-500');
@@ -414,6 +418,19 @@ if (donationForm) {
         
         if (!(consent && consent.checked)) {
             valid = false;
+        }
+        
+        if (receiptInput && receiptInput.files && receiptInput.files[0]) {
+            const file = receiptInput.files[0];
+            const max = 5 * 1024 * 1024;
+            const allowed = ['image/jpeg','image/png','image/gif','image/bmp','image/webp','image/svg+xml'];
+            if (file.size > max || (file.type && !allowed.includes(file.type))) {
+                valid = false;
+                if (receiptError) {
+                    receiptError.textContent = 'El archivo debe ser una imagen válida y no superar 5MB.';
+                    receiptError.classList.remove('hidden');
+                }
+            }
         }
         
         if (!valid) {
@@ -472,6 +489,42 @@ if (donationForm) {
             submitBtn.classList.remove('opacity-75');
         }
     });
+    
+    if (receiptInput) {
+        receiptInput.addEventListener('change', () => {
+            if (receiptError) receiptError.classList.add('hidden');
+            const file = receiptInput.files && receiptInput.files[0];
+            if (!file) {
+                if (receiptPreview) {
+                    receiptPreview.src = '';
+                    receiptPreview.classList.add('hidden');
+                }
+                return;
+            }
+            const max = 5 * 1024 * 1024;
+            const allowed = ['image/jpeg','image/png','image/gif','image/bmp','image/webp','image/svg+xml'];
+            if (file.size > max || (file.type && !allowed.includes(file.type))) {
+                receiptInput.value = '';
+                if (receiptError) {
+                    receiptError.textContent = 'El archivo debe ser una imagen válida y no superar 5MB.';
+                    receiptError.classList.remove('hidden');
+                }
+                if (receiptPreview) {
+                    receiptPreview.src = '';
+                    receiptPreview.classList.add('hidden');
+                }
+                return;
+            }
+            if (receiptPreview) {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    receiptPreview.src = reader.result;
+                    receiptPreview.classList.remove('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    }
 }
 
 // ==================== CONTADOR DE VISITAS CON BASE DE DATOS ====================

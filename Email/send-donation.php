@@ -67,6 +67,144 @@ $method_text = [
 ];
 $method_display = isset($method_text[$method]) ? $method_text[$method] : $method;
 
+require_once __DIR__ . '/../SQL/conexion.php';
+$pdo = getDBConnection();
+$donation_id = bin2hex(random_bytes(16));
+$user_id = hash('sha256', strtolower($donor_email));
+$now = date('Y-m-d H:i:s');
+
+if ($pdo) {
+    $pdo->exec("CREATE TABLE IF NOT EXISTS donations (
+        id VARCHAR(64) PRIMARY KEY,
+        user_id VARCHAR(64) NOT NULL,
+        donor_name VARCHAR(255) NOT NULL,
+        donor_email VARCHAR(255) NOT NULL,
+        amount INT NOT NULL,
+        frequency VARCHAR(32) NOT NULL,
+        method VARCHAR(32) NOT NULL,
+        notes TEXT,
+        created_at DATETIME NOT NULL
+    )");
+    $stmt = $pdo->prepare("INSERT INTO donations (id,user_id,donor_name,donor_email,amount,frequency,method,notes,created_at) VALUES (?,?,?,?,?,?,?,?,?)");
+    $stmt->execute([$donation_id,$user_id,$donor_name,$donor_email,(int)$amount,$frequency,$method,$notes,$now]);
+}
+
+$stored_file = null;
+$stored_mime = null;
+$stored_size = null;
+
+if (isset($_FILES['receipt']) && is_array($_FILES['receipt']) && $_FILES['receipt']['error'] === UPLOAD_ERR_OK) {
+    $fileTmp = $_FILES['receipt']['tmp_name'];
+    $fileSize = $_FILES['receipt']['size'];
+    $maxSize = 5 * 1024 * 1024;
+    if ($fileSize > $maxSize) {
+        http_response_code(400);
+        echo json_encode(['success' => false, 'message' => 'El comprobante supera 5MB']);
+        exit;
+    }
+    $finfo = finfo_open(FILEINFO_MIME_TYPE);
+    $mime = finfo_file($finfo, $fileTmp);
+    finfo_close($finfo);
+    $allowed = ['image/jpeg','image/png','image/gif','image/bmp','image/webp','image/svg+xml'];
+    if (!in_array($mime, $allowed, true)) {
+        http_response_code(400);
+        echo json_encode(['success' => false, 'message' => 'El comprobante debe ser una imagen']);
+        exit;
+    }
+    $raw = file_get_contents($fileTmp);
+    $suspicious = false;
+    if ($raw !== false) {
+        $chk = strtolower(substr($raw, 0, 2048));
+        if (strpos($chk, '<?php') !== false || strpos($chk, '<script') !== false || strpos($chk, 'onerror=') !== false) {
+            $suspicious = true;
+        }
+    }
+    if ($suspicious) {
+        http_response_code(400);
+        echo json_encode(['success' => false, 'message' => 'Archivo no permitido']);
+        exit;
+    }
+    $ext = 'jpg';
+    if ($mime === 'image/png') $ext = 'png';
+    elseif ($mime === 'image/gif') $ext = 'gif';
+    elseif ($mime === 'image/bmp') $ext = 'bmp';
+    elseif ($mime === 'image/webp') $ext = 'webp';
+    elseif ($mime === 'image/svg+xml') $ext = 'svg';
+    $dir = realpath(__DIR__ . '/../Storage/receipts');
+    if (!$dir) {
+        $p = __DIR__ . '/../Storage/receipts';
+        if (!is_dir($p)) mkdir($p, 0775, true);
+        $dir = realpath($p);
+    }
+    $name = 'receipt_' . date('YmdHis') . '_' . bin2hex(random_bytes(6)) . '.' . $ext;
+    $dest = $dir . DIRECTORY_SEPARATOR . $name;
+    $stored = false;
+    if ($mime === 'image/svg+xml') {
+        $stored = move_uploaded_file($fileTmp, $dest);
+    } else {
+        $src = null;
+        if ($mime === 'image/jpeg') $src = @imagecreatefromjpeg($fileTmp);
+        elseif ($mime === 'image/png') $src = @imagecreatefrompng($fileTmp);
+        elseif ($mime === 'image/gif') $src = @imagecreatefromgif($fileTmp);
+        elseif ($mime === 'image/bmp') $src = @imagecreatefrombmp($fileTmp);
+        elseif ($mime === 'image/webp') $src = @imagecreatefromwebp($fileTmp);
+        if ($src) {
+            $w = imagesx($src);
+            $h = imagesy($src);
+            $maxW = 1920;
+            $maxH = 1920;
+            $ratio = min($maxW / $w, $maxH / $h, 1);
+            $nw = (int)floor($w * $ratio);
+            $nh = (int)floor($h * $ratio);
+            $dst = imagecreatetruecolor($nw, $nh);
+            imagealphablending($dst, false);
+            imagesavealpha($dst, true);
+            imagecopyresampled($dst, $src, 0, 0, 0, 0, $nw, $nh, $w, $h);
+            if ($mime === 'image/jpeg' || $mime === 'image/bmp') {
+                $stored = imagejpeg($dst, $dest, 80);
+                $ext = 'jpg';
+                $mime = 'image/jpeg';
+            } elseif ($mime === 'image/png') {
+                $stored = imagepng($dst, $dest, 2);
+            } elseif ($mime === 'image/gif') {
+                $stored = imagegif($dst, $dest);
+            } elseif ($mime === 'image/webp') {
+                if (function_exists('imagewebp')) {
+                    $stored = imagewebp($dst, $dest, 80);
+                } else {
+                    $stored = imagejpeg($dst, $dest, 80);
+                    $ext = 'jpg';
+                    $mime = 'image/jpeg';
+                }
+            }
+            imagedestroy($dst);
+            imagedestroy($src);
+        } else {
+            $stored = move_uploaded_file($fileTmp, $dest);
+        }
+    }
+    if (!$stored) {
+        http_response_code(500);
+        echo json_encode(['success' => false, 'message' => 'No se pudo almacenar el comprobante']);
+        exit;
+    }
+    $stored_file = $name;
+    $stored_mime = $mime;
+    $stored_size = filesize($dest);
+    if ($pdo) {
+        $pdo->exec("CREATE TABLE IF NOT EXISTS donation_receipts (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            donation_id VARCHAR(64) NOT NULL,
+            user_id VARCHAR(64) NOT NULL,
+            filename VARCHAR(255) NOT NULL,
+            mime VARCHAR(64) NOT NULL,
+            size_bytes INT NOT NULL,
+            created_at DATETIME NOT NULL
+        )");
+        $stmt2 = $pdo->prepare("INSERT INTO donation_receipts (donation_id,user_id,filename,mime,size_bytes,created_at) VALUES (?,?,?,?,?,?)");
+        $stmt2->execute([$donation_id,$user_id,$stored_file,$stored_mime,(int)$stored_size,$now]);
+    }
+}
 // ========== EMAIL 1: A LA FUNDACIÓN ==========
 $subject_fundacion = "Nueva donación registrada - $amount_formatted";
 $message_fundacion = "
@@ -275,7 +413,7 @@ $mail_donante = mail($donor_email, $subject_donante, $message_donante, $headers_
 if ($mail_fundacion && $mail_donante) {
     echo json_encode([
         'success' => true,
-        'message' => '¡Gracias por tu donación! Revisa tu correo para las instrucciones de pago.'
+        'message' => '¡Gracias! Donación registrada. Si adjuntaste el comprobante, fue almacenado correctamente.'
     ]);
 } else {
     http_response_code(500);

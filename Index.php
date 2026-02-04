@@ -187,6 +187,15 @@
                                 <input type="text" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="Tu nombre">
                             </div>
                             <div>
+                                <label for="donation-receipt" class="block text-sm font-semibold text-gray-300 mb-2">Comprobante de pago (imagen)</label>
+                                <input id="donation-receipt" name="receipt" type="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.webp,.svg,image/*" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" aria-describedby="receipt-error receipt-help">
+                                <p id="receipt-help" class="mt-1 text-xs text-gray-400">Formatos: JPG, JPEG, PNG, GIF, BMP, WEBP, SVG. Máx 5MB.</p>
+                                <p id="receipt-error" class="mt-1 text-xs text-red-500 hidden" role="alert">El archivo debe ser una imagen y no superar 5MB.</p>
+                                <div class="mt-3">
+                                    <img id="receipt-preview" alt="Vista previa del comprobante de pago" class="max-h-48 rounded-lg border border-amber-500/30 hidden">
+                                </div>
+                            </div>
+                            <div>
                                 <label class="block text-sm font-semibold text-gray-300 mb-2">Correo electrónico</label>
                                 <input type="email" required class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" placeholder="tu@email.com">
                             </div>
@@ -640,6 +649,15 @@
                             <div id="nequi-details" class="hidden bg-amber-500/10 border border-amber-500/30 rounded-lg p-4 text-sm text-amber-500">
                                 <p><span class="font-semibold">Nequi:</span> 313 596 8790</p>
                                 <p>Usa el número para transferir por Nequi. Envía el comprobante a contacto@fundacionyonari.org.</p>
+                            </div>
+                            <div>
+                                <label for="donation-receipt" class="block text-sm font-semibold text-gray-300 mb-2">Comprobante de pago (imagen)</label>
+                                <input id="donation-receipt" name="receipt" type="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.webp,.svg,image/*" class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:border-amber-500 focus:ring-2 focus:ring-amber-500/50 outline-none text-white transition-colors duration-300" aria-describedby="receipt-error receipt-help">
+                                <p id="receipt-help" class="mt-1 text-xs text-gray-400">Formatos: JPG, JPEG, PNG, GIF, BMP, WEBP, SVG. Máx 5MB.</p>
+                                <p id="receipt-error" class="mt-1 text-xs text-red-500 hidden" role="alert">El archivo debe ser una imagen y no superar 5MB.</p>
+                                <div class="mt-3">
+                                    <img id="receipt-preview" alt="Vista previa del comprobante de pago" class="max-h-48 rounded-lg border border-amber-500/30 hidden">
+                                </div>
                             </div>
                             <div>
                                 <label for="donation-message" class="block text-sm font-semibold text-gray-300 mb-2">Mensaje (opcional)</label>
