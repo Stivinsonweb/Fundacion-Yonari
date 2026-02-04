@@ -550,9 +550,23 @@ if (visitorCountElement) {
 // ==================== SCROLL TO TOP BUTTON ====================
 const scrollTopBtn = document.createElement('button');
 scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-scrollTopBtn.className = 'fixed bottom-36 right-6 z-50 w-12 h-12 flex items-center justify-center bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transform hover:scale-110 transition-all duration-300 hidden';
+scrollTopBtn.className = 'fixed right-6 z-50 w-10 h-10 flex items-center justify-center bg-amber-500 text-white rounded-full shadow-lg hover:bg-amber-600 transform hover:scale-110 transition-all duration-300 hidden';
 scrollTopBtn.setAttribute('aria-label', 'Volver arriba');
 document.body.appendChild(scrollTopBtn);
+
+function positionScrollTop() {
+  const actions = document.getElementById('float-actions');
+  if (actions) {
+    const bottomBase = 24;
+    const spacing = 32;
+    const bottomPx = bottomBase + actions.offsetHeight + spacing;
+    scrollTopBtn.style.bottom = `${bottomPx}px`;
+  } else {
+    scrollTopBtn.style.bottom = '36px';
+  }
+}
+positionScrollTop();
+window.addEventListener('resize', positionScrollTop);
 
 window.addEventListener('scroll', () => {
     if (window.pageYOffset > 300) {

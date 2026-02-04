@@ -102,50 +102,50 @@
                 </div>
                 
                 <!-- Developers Credits - SÚPER LLAMATIVO -->
-                <div class="bg-gradient-to-br from-gray-800/80 via-gray-900/80 to-gray-800/80 rounded-2xl p-8 border-2 border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 shadow-2xl">
+                <div class="bg-gradient-to-br from-gray-800/80 via-gray-900/80 to-gray-800/80 rounded-sm p-2 mt-12 mb-2 border border-amber-500/20 hover:border-amber-500/40 transition-all duration-300 shadow-sm">
                     <div class="text-center mb-6">
-                        <h3 class="text-xl font-bold gradient-text mb-2 flex items-center justify-center">
-                            <i class="fas fa-code mr-3 text-2xl"></i>
+                        <h3 class="text-[10px] font-bold gradient-text mb-1 flex items-center justify-center">
+                            <i class="fas fa-code mr-2 text-sm"></i>
                             Desarrollado por
-                            <i class="fas fa-code ml-3 text-2xl"></i>
+                            <i class="fas fa-code ml-2 text-sm"></i>
                         </h3>
-                        <p class="text-xs text-gray-500 uppercase tracking-wider">Equipo de desarrollo web</p>
+                        <p class="text-[9px] text-gray-500 uppercase tracking-wider">Equipo de desarrollo web</p>
                     </div>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
                         <!-- Stivinson Correa Matura -->
-                        <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 border-2 border-amber-500/30 hover:border-amber-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/30 relative overflow-hidden">
+                        <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-sm p-2 border border-amber-500/30 hover:border-amber-500 transition-all duration-300 relative overflow-hidden">
                             <!-- Efecto de brillo en hover -->
                             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-amber-500/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                             
                             <div class="relative z-10">
-                                <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center justify-between mb-2">
                                     <div class="flex-1">
-                                        <h4 class="text-lg font-bold text-white mb-1">Stivinson Correa Matura</h4>
-                                        <p class="text-xs text-amber-500 uppercase tracking-wide font-semibold">Full Stack Developer</p>
+                                        <h4 class="text-sm font-bold text-white mb-1">Stivinson Correa Matura</h4>
+                                        <p class="text-[10px] text-amber-500 uppercase tracking-wide font-semibold">Full Stack Developer</p>
                                     </div>
-                                    <div class="bg-gradient-to-br from-amber-500 to-amber-600 p-4 rounded-xl shadow-lg">
-                                        <i class="fas fa-code text-white text-3xl"></i>
+                                    <div class="bg-gradient-to-br from-amber-500 to-amber-600 p-1.5 rounded-sm shadow-sm">
+                                        <i class="fas fa-code text-white text-sm"></i>
                                     </div>
                                 </div>
                                 
-                                <div class="flex items-center space-x-2 pt-4 border-t border-gray-700/50">
-                                    <span class="text-xs text-gray-500 font-semibold">Conéctate:</span>
+                                <div class="flex items-center space-x-2 pt-2 border-t border-gray-700/50">
+                                    <span class="text-[10px] text-gray-500 font-semibold">Conéctate:</span>
                                     <div class="flex items-center space-x-2 flex-1 justify-end">
                                         <!-- Instagram -->
                                         <a href="https://instagram.com/stivinson_correa" target="_blank" rel="noopener noreferrer" 
-                                           class="group/btn relative bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-3 rounded-xl hover:shadow-lg hover:shadow-pink-500/50 transition-all duration-300 transform hover:scale-110 hover:rotate-3"
+                                           class="group/btn relative bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-1 rounded-md hover:shadow-sm hover:shadow-pink-500/30 transition-all duration-300 transform hover:scale-105"
                                            title="Instagram">
-                                            <i class="fab fa-instagram text-white text-xl"></i>
+                                            <i class="fab fa-instagram text-white text-sm"></i>
                                             <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover/btn:opacity-100 transition-opacity">
                                                 @stivinson_correa
                                             </span>
                                         </a>
                                         <!-- GitHub -->
                                         <a href="https://github.com/stivinsoncorrea" target="_blank" rel="noopener noreferrer"
-                                           class="group/btn relative bg-gray-700 p-3 rounded-xl hover:bg-white hover:shadow-lg hover:shadow-gray-400/50 transition-all duration-300 transform hover:scale-110 hover:-rotate-3"
+                                           class="group/btn relative bg-gray-700 p-1 rounded-md hover:bg-white hover:shadow-sm hover:shadow-gray-400/30 transition-all duration-300 transform hover:scale-105"
                                            title="GitHub">
-                                            <i class="fab fa-github text-white group-hover/btn:text-gray-900 text-xl transition-colors"></i>
+                                            <i class="fab fa-github text-white group-hover/btn:text-gray-900 text-sm transition-colors"></i>
                                             <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover/btn:opacity-100 transition-opacity">
                                                 stivinsoncorrea
                                             </span>
@@ -156,38 +156,38 @@
                         </div>
                         
                         <!-- William Renteria -->
-                        <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 border-2 border-amber-500/30 hover:border-amber-500 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/30 relative overflow-hidden">
+                        <div class="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-sm p-2 border border-amber-500/30 hover:border-amber-500 transition-all duration-300 relative overflow-hidden">
                             <!-- Efecto de brillo en hover -->
                             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-amber-500/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                             
                             <div class="relative z-10">
-                                <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center justify-between mb-2">
                                     <div class="flex-1">
-                                        <h4 class="text-lg font-bold text-white mb-1">William Renteria</h4>
-                                        <p class="text-xs text-amber-500 uppercase tracking-wide font-semibold">Frontend Developer</p>
+                                        <h4 class="text-sm font-bold text-white mb-1">William Renteria</h4>
+                                        <p class="text-[10px] text-amber-500 uppercase tracking-wide font-semibold">Frontend Developer</p>
                                     </div>
-                                    <div class="bg-gradient-to-br from-amber-500 to-amber-600 p-4 rounded-xl shadow-lg">
-                                        <i class="fas fa-laptop-code text-white text-3xl"></i>
+                                    <div class="bg-gradient-to-br from-amber-500 to-amber-600 p-1.5 rounded-sm shadow-sm">
+                                        <i class="fas fa-laptop-code text-white text-sm"></i>
                                     </div>
                                 </div>
                                 
-                                <div class="flex items-center space-x-2 pt-4 border-t border-gray-700/50">
-                                    <span class="text-xs text-gray-500 font-semibold">Conéctate:</span>
+                                <div class="flex items-center space-x-2 pt-2 border-t border-gray-700/50">
+                                    <span class="text-[10px] text-gray-500 font-semibold">Conéctate:</span>
                                     <div class="flex items-center space-x-2 flex-1 justify-end">
                                         <!-- GitHub -->
                                         <a href="https://github.com/williamrenteria" target="_blank" rel="noopener noreferrer"
-                                           class="group/btn relative bg-gray-700 p-3 rounded-xl hover:bg-white hover:shadow-lg hover:shadow-gray-400/50 transition-all duration-300 transform hover:scale-110 hover:-rotate-3"
+                                           class="group/btn relative bg-gray-700 p-1 rounded-md hover:bg-white hover:shadow-sm hover:shadow-gray-400/30 transition-all duration-300 transform hover:scale-105"
                                            title="GitHub">
-                                            <i class="fab fa-github text-white group-hover/btn:text-gray-900 text-xl transition-colors"></i>
+                                            <i class="fab fa-github text-white group-hover/btn:text-gray-900 text-sm transition-colors"></i>
                                             <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover/btn:opacity-100 transition-opacity">
                                                 williamrenteria
                                             </span>
                                         </a>
                                         <!-- LinkedIn -->
                                         <a href="https://linkedin.com/in/williamrenteria" target="_blank" rel="noopener noreferrer"
-                                           class="group/btn relative bg-blue-600 p-3 rounded-xl hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-110 hover:rotate-3"
+                                           class="group/btn relative bg-blue-600 p-1 rounded-md hover:shadow-sm hover:shadow-blue-500/30 transition-all duration-300 transform hover:scale-105"
                                            title="LinkedIn">
-                                            <i class="fab fa-linkedin-in text-white text-xl"></i>
+                                            <i class="fab fa-linkedin-in text-white text-sm"></i>
                                             <span class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-2 py-1 rounded text-xs whitespace-nowrap opacity-0 group-hover/btn:opacity-100 transition-opacity">
                                                 williamrenteria
                                             </span>

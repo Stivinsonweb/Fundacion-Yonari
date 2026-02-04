@@ -6,6 +6,8 @@
     <meta name="description" content="Fundación Yonari - Protege tus derechos. Organización comprometida con la defensa y promoción de los derechos en Colombia.">
     <meta name="keywords" content="fundación, derechos, Colombia, justicia, asesoría jurídica">
     <title>Fundación Yonari - Protege tus derechos</title>
+    <link rel="icon" type="image/png" href="/Src/assets/Logo/Fundacion-yonari.png">
+    <link rel="apple-touch-icon" href="/Src/assets/Logo/Fundacion-yonari.png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,21 +23,21 @@
 <body class="bg-gray-900 text-gray-100 overflow-x-hidden">
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/573135968790" target="_blank" 
-       class="fixed bottom-6 right-6 z-50 w-14 h-14 flex items-center justify-center bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transform hover:scale-110 transition-all duration-300 group"
-       aria-label="Contactar por WhatsApp">
-        <i class="fab fa-whatsapp text-2xl"></i>
-        <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            ¡Escríbenos!
-        </span>
-    </a>
-    
-    <!-- Facebook Floating Button -->
-    <a href="https://www.facebook.com/profile.php?id=61586886801192" target="_blank"
-       class="fixed bottom-20 right-6 z-50 w-14 h-14 flex items-center justify-center bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transform hover:scale-110 transition-all duration-300"
-       aria-label="Visitar Facebook">
-        <i class="fab fa-facebook-f text-2xl"></i>
-    </a>
+    <div id="float-actions" class="fixed bottom-10 right-6 z-50 flex flex-col items-center space-y-5">
+        <a href="https://www.facebook.com/profile.php?id=61586886801192" target="_blank"
+           class="w-14 h-14 flex items-center justify-center bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transform hover:scale-110 transition-all duración-300"
+           aria-label="Visitar Facebook">
+            <i class="fab fa-facebook-f text-2xl"></i>
+        </a>
+        <a href="https://wa.me/573135968790" target="_blank" 
+           class="w-14 h-14 flex items-center justify-center bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transform hover:scale-110 transition-all duration-300 group"
+           aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            <span class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-1 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                ¡Escríbenos!
+            </span>
+        </a>
+    </div>
     
     <!-- Header/Navigation -->
     <header class="fixed top-0 w-full z-40 bg-gray-900/95 backdrop-blur-md border-b border-amber-500/30 transition-all duration-300" id="navbar">
